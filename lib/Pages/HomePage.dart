@@ -52,7 +52,15 @@ class HomePage extends StatelessWidget {
             ),
             FadeInRight(delay: Duration(seconds: 5),child: CustomCard('+55 29 61 45 55 / México', Icons.phone,)),
             FadeInRight(delay: Duration(seconds: 6),child: CustomCard('perezg.josesal@gmail.com', Icons.email_outlined)),
-            BounceInDown(delay: Duration(seconds: 7),child: OtroBoton())
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                BounceInDown(delay: Duration(seconds: 7),child: OtroBoton(text: 'Ui',route: 'uiPages',)),
+                BounceInDown(delay: Duration(seconds: 7),child: OtroBoton(text: 'Animations',)),
+                BounceInDown(delay: Duration(seconds: 7),child: OtroBoton(text: 'Functionality',))
+              ],
+            )
+            
           ],
         ),
       ),

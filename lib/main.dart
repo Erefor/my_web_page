@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:my_web_page/HomePage.dart';
+import 'package:my_web_page/Pages/HomePage.dart';
+import 'package:my_web_page/Pages/UiPage.dart';
 
 
 
@@ -11,7 +12,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      initialRoute: '/',
+      routes: {
+        '/' : (BuildContext context)=> HomePage(),
+        'uiPages' : (BuildContext context)=> UiPage(),
+      },
     );
   }
 }
