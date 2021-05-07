@@ -21,7 +21,7 @@ class OtroBoton extends StatelessWidget {
         },
         child: Text(text, style: GoogleFonts.lato(
           color: Color(0xff28527a),
-          fontSize: _screenInfo.width < 500 ? 15 : 20,
+          fontSize: _screenInfo.width < 500 ? 15 : 18,
         )),
       ),
     );
