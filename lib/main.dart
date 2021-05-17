@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 
 import 'package:my_web_page/Pages/HomePage.dart';
 import 'package:my_web_page/Pages/UiPage.dart';
+import 'package:my_web_page/Pages/UiPages.dart/UiShopDemoPage.dart';
 
-
-
-main()=> runApp(MyApp());
+main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: 'uiPages',
+      initialRoute: 'test',
       routes: {
-        '/' : (BuildContext context)=> HomePage(),
-        'uiPages' : (BuildContext context)=> UiPage(),
+        '/': (BuildContext context) => HomePage(),
+        'uiPages': (BuildContext context) => UiPage(),
+        'test': (BuildContext context) => UiShopDemoPage()
       },
     );
   }
