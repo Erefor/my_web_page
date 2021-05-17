@@ -16,7 +16,7 @@ class OtroBoton extends StatelessWidget {
       ),
       margin: EdgeInsets.symmetric(horizontal: 8, vertical: 10),
       child: RawMaterialButton(
-        padding: EdgeInsets.all(25),
+        padding: EdgeInsets.all(10),
         onPressed: () {
           Navigator.pushNamed(context, route);
         },
@@ -24,7 +24,9 @@ class OtroBoton extends StatelessWidget {
             style: GoogleFonts.lato(
               color: Color(0xff28527a),
               fontSize: _screenInfo.width < 500 ? 15 : 18,
-            )),
+            ),
+            textAlign: TextAlign.justify,  
+          ),
       ),
     );
   }

@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:my_web_page/Pages/UiPages.dart/Emergency%20Page/EmergencyPage.dart';
 import 'package:my_web_page/Pages/UiPages.dart/UiFormPage.dart';
 import 'package:my_web_page/Pages/UiPages.dart/UiGreenPage.dart';
+import 'package:my_web_page/Pages/UiPages.dart/UiShopDemoPage.dart';
 class UiPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -68,7 +69,7 @@ class _FullView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              PageHolder(widget: EmergencyPage()),
+              PageHolder(widget: UiShopDemoPage()),
 
               PageHolder(widget: EmergencyPage()),    
             ],
