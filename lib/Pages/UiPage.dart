@@ -1,6 +1,5 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_web_page/Pages/UiPages.dart/Emergency%20Page/EmergencyPage.dart';
 import 'package:my_web_page/Pages/UiPages.dart/UiFormPage.dart';
@@ -9,7 +8,7 @@ class UiPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[100],
+      backgroundColor: Color(0xff153D75),
       body: LayoutBuilder(
         builder: (context, constrains){
           if(constrains.maxWidth > 879){
@@ -109,7 +108,7 @@ class PageHolder extends StatelessWidget {
 }
 
 class DescriptionText extends StatelessWidget {
-  final String headText = 'No matter how complex the design became:';
+  final String headText = 'No matter how complex the design became';
 
   @override
   Widget build(BuildContext context) {
@@ -118,21 +117,20 @@ class DescriptionText extends StatelessWidget {
       children: <Widget>[
         Container(
           margin: EdgeInsets.symmetric(vertical: 50),
-          child: FlutterLogo(size: 250,),
+          child: FadeInLeft(delay: Duration(seconds: 2),child: FlutterLogo(size: 250,)),
         ),
         Container(
           margin: EdgeInsets.symmetric(vertical: 100, horizontal: 100),
-          child: AnimatedTextKit(
-            animatedTexts: [
-              TypewriterAnimatedText(headText,
-              textStyle: GoogleFonts.roboto(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 60, 
+          child: FadeIn(
+            delay: Duration(seconds: 3),
+            child: Text(headText,
+              style: GoogleFonts.roboto(
+                color: Colors.white,
+                fontSize: 60,
               ),
-              speed: Duration(milliseconds: 100),
-            )
-          ]),
+              textAlign: TextAlign.justify,
+            ),
+          )
         ),
       ],
     );

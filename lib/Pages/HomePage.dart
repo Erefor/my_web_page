@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[100],
+      backgroundColor: Color(0xff153D75),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
