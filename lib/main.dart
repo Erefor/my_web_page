@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_web_page/Pages/AboutMePage.dart';
 
 import 'package:my_web_page/Pages/HomePage.dart';
 import 'package:my_web_page/Pages/UiPage.dart';
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (BuildContext context) => HomePage(),
         'uiPages': (BuildContext context) => UiPage(),
+        'aboutMePage': (BuildContext context) => AboutMePage(),
         'test': (BuildContext context) => TestUiPage()
       },
     );
