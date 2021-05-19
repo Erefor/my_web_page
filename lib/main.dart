@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:my_web_page/Pages/HomePage.dart';
 import 'package:my_web_page/Pages/UiPage.dart';
-import 'package:my_web_page/Pages/UiPages.dart/UiShopDemoPage.dart';
-
+import 'package:my_web_page/TestUiPage.dart';
 main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -11,11 +10,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/',
+      initialRoute: 'test',
       routes: {
         '/': (BuildContext context) => HomePage(),
         'uiPages': (BuildContext context) => UiPage(),
-        'test': (BuildContext context) => UiShopDemoPage()
+        'test': (BuildContext context) => TestUiPage()
       },
     );
   }
