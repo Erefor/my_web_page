@@ -39,9 +39,13 @@ class LayoutBlock2 extends StatelessWidget {
       crossAxisAlignment: WrapCrossAlignment.center,
       spacing: 150,
       children: <Widget>[
-        _PagesNavigationController(),
-        PageHolder(
-          widget: uiProvider.widget,
+        FadeInUp(
+            delay: Duration(seconds: 3), child: _PagesNavigationController()),
+        BounceInRight(
+          delay: Duration(seconds: 4),
+          child: PageHolder(
+            widget: uiProvider.widget,
+          ),
         )
       ],
     );
@@ -125,7 +129,7 @@ class PageHolder extends StatelessWidget {
 }
 
 class DescriptionText extends StatelessWidget {
-  final String headText = 'No matter how complex the design became';
+  final String headText = 'No matter how complex the design became.';
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -134,7 +138,7 @@ class DescriptionText extends StatelessWidget {
         Container(
           margin: EdgeInsets.symmetric(vertical: 5),
           child: FadeInLeft(
-              delay: Duration(seconds: 2),
+              delay: Duration(seconds: 1),
               child: FlutterLogo(
                 size: 150,
               )),
@@ -142,7 +146,7 @@ class DescriptionText extends StatelessWidget {
         Container(
             margin: EdgeInsets.symmetric(vertical: 40, horizontal: 50),
             child: FadeIn(
-              delay: Duration(seconds: 3),
+              delay: Duration(seconds: 2),
               child: Text(
                 headText,
                 style: GoogleFonts.roboto(
